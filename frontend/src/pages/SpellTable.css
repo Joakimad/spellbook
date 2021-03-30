@@ -1,0 +1,42 @@
+.SpellTable {
+    font-size: 16px;
+    text-align: center;
+}
+
+.SpellTable h1 {
+    text-align: left;
+}
+
+.SpellTable a:hover {
+    text-decoration: underline;
+}
+
+.SpellTable table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.SpellTable th {
+    background-color: #58170D;
+    color: #fdf1dc;
+    border: 1px solid black;
+}
+
+.SpellTable td {
+    border: 1px solid black;
+    line-height: 0;
+    padding: 5px;
+    min-width: 50px;
+}
+
+.SpellTable td a {
+    display: block;
+    color: #58170D;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 16px;
+}
+
+.SpellTable tr:nth-child(even) {
+    background-color: #fdf1dc;
+}
