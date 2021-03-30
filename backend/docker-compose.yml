@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: spellbook_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: root
+    ports:
+      - "5001:3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: spellbook_pma
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    ports:
+      - "5002:80"
